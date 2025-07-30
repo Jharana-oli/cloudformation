@@ -25,5 +25,5 @@ jobs:
           aws cloudformation deploy \
             --template-file s3.yaml \
             --stack-name S3Bucket-Stack \
-            --parameter-overrides BucketName=Jharanaoli2412 \
+            --parameter-overrides BucketName=Jharanaoli2412321234\
             --capabilities CAPABILITY_NAMED_IAM
