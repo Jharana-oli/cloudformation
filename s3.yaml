@@ -1,0 +1,25 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Create an S3 bucket for CloudFormation templates
+
+Parameters:
+  BucketName:
+    Type: String
+    Description: Globally unique name for the S3 bucket
+
+Resources:
+  MyS3Bucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Ref BucketName
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+      VersioningConfiguration:
+        Status: Enabled
+
+Outputs:
+  CreatedBucket:
+    Value: !Ref MyS3Bucket
+    Description: The name of the created bucket
