@@ -21,5 +21,5 @@ Resources:
 
 Outputs:
   CreatedBucket:
-    Value: !Ref BuckectName
+    Value: !Ref BucketName
     Description: The name of the created bucket
