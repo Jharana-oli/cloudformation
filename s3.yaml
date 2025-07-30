@@ -21,5 +21,5 @@ Resources:
 
 Outputs:
   CreatedBucket:
-    Value: !Ref MyS3Bucket
+    Value: !Ref BuckectName
     Description: The name of the created bucket
